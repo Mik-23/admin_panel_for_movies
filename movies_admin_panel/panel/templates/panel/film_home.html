@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Фильмы{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Фильмы</h1>
+        <p>Информация о фильмах</p>
+        <a class="btn btn-warning" href="{% url 'home' %}">На главную</a>
+        {% for el in film %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.title}}</h3>
+            <p>{{ el.description }}<p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

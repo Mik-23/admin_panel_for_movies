@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Жанры{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Жанры</h1>
+        <p>Информация о жанрах</p>
+        <a class="btn btn-warning" href="{% url 'home' %}">На главную</a>
+        {% for el in genre %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.name}}</h3>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

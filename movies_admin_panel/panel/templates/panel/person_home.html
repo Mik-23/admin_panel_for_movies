@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Участники{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Участники</h1>
+        <p>Информация об участниках</p>
+        <a class="btn btn-warning" href="{% url 'home' %}">На главную</a>
+
+        {% for el in person %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.full_name}}</h3>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
