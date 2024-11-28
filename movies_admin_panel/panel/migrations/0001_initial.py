@@ -79,6 +79,7 @@ class Migration(migrations.Migration):
             name='PersonFilmwork',
             fields=[
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('role', models.TextField(verbose_name='Роль')),
                 ('created', models.DateTimeField(auto_now_add=True, verbose_name='Создал')),
             ],
             options={
