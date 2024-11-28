@@ -83,7 +83,7 @@ class PersonFilmwork(models.Model):
         Person, on_delete=models.CASCADE)
     film_work = models.ForeignKey(
         Filmwork, on_delete=models.CASCADE)
-    role = models.TextField
+    role = models.TextField("Роль")
     created = models.DateTimeField("Создал", auto_now_add=True)
     class Meta:
         verbose_name = 'Участник фильма'
