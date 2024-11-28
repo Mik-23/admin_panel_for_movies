@@ -1,0 +1,5 @@
+django==5.1.1
+python-decouple==3.8
+psycopg2==2.9.9
+django-debug_toolbar==4.4.6
+pip==24.2
